@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/three-bloom/static/css/main.39a41183.css",
+    "main.js": "/three-bloom/static/js/main.4d518bfd.js",
+    "index.html": "/three-bloom/index.html",
+    "main.39a41183.css.map": "/three-bloom/static/css/main.39a41183.css.map",
+    "main.4d518bfd.js.map": "/three-bloom/static/js/main.4d518bfd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39a41183.css",
+    "static/js/main.4d518bfd.js"
+  ]
+}
