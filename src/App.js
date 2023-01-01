@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
+
+const Scene = () => {
+  return (
+    <>
+
+    <EffectComposer>
+      <Bloom mipmapBlur/>
+    </EffectComposer>
+    <OrbitControls/>
+    <color args={["black"]} attach="background"/>
+    <mesh>
+      <boxGeometry/>
+      <meshBasicMaterial color={[1.5, 1, 4]} toneMapped={false}/>
+    </mesh>
+    <mesh position={[3,0,0]}>
+      <icosahedronGeometry/>
+      <meshBasicMaterial color={[4.5, 1, 0]} toneMapped={false}/>
+    </mesh>
+    </>
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Canvas>
+        <Scene/>
+      </Canvas>
   );
 }
 
